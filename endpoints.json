@@ -1,0 +1,999 @@
+{
+  "url": "https://kick.com/",
+  "port": null,
+  "defaults": {},
+  "routes": {
+    "l5-swagger.default.api": {
+      "GET": "documentation",
+      "HEAD": "documentation"
+    },
+    "l5-swagger.default.docs": {
+      "GET": "docs/{jsonFile?}",
+      "HEAD": "docs/{jsonFile?}"
+    },
+    "l5-swagger.default.asset": {
+      "GET": "docs/asset/{asset}",
+      "HEAD": "docs/asset/{asset}"
+    },
+    "l5-swagger.default.oauth2_callback": {
+      "GET": "api/oauth2-callback",
+      "HEAD": "api/oauth2-callback"
+    },
+    "cashier.payment": {
+      "GET": "stripe/payment/{id}",
+      "HEAD": "stripe/payment/{id}"
+    },
+    "cashier.webhook": {
+      "POST": "stripe/webhook"
+    },
+    "nova.login": {
+      "POST": "nova/login"
+    },
+    "nova.logout": {
+      "GET": "nova/logout",
+      "HEAD": "nova/logout"
+    },
+    "nova.password.request": {
+      "GET": "nova/password/reset",
+      "HEAD": "nova/password/reset"
+    },
+    "nova.password.email": {
+      "POST": "nova/password/email"
+    },
+    "nova.password.reset": {
+      "GET": "nova/password/reset/{token}",
+      "HEAD": "nova/password/reset/{token}"
+    },
+    "mobile-api.get-token": {
+      "POST": "mobile/token"
+    },
+    "login": {
+      "GET": "login",
+      "HEAD": "login"
+    },
+    "logout": {
+      "POST": "logout"
+    },
+    "register": {
+      "GET": "register",
+      "HEAD": "register"
+    },
+    "password.request": {
+      "GET": "password/reset",
+      "HEAD": "password/reset"
+    },
+    "password.email": {
+      "POST": "password/email"
+    },
+    "password.reset": {
+      "GET": "password/reset/{token}",
+      "HEAD": "password/reset/{token}"
+    },
+    "password.update": {
+      "POST": "password/reset"
+    },
+    "password.confirm": {
+      "GET": "password/confirm",
+      "HEAD": "password/confirm"
+    },
+    "socialite.redirect": {
+      "POST": "socialite/{provider}"
+    },
+    "user": {
+      "GET": "api/v1/user",
+      "HEAD": "api/v1/user"
+    },
+    "resource_urls": {
+      "GET": "api/v1/resource-urls",
+      "HEAD": "api/v1/resource-urls"
+    },
+    "agreed-terms": {
+      "POST": "api/v1/signup/agreed-terms"
+    },
+    "set-username": {
+      "POST": "api/v1/signup/username"
+    },
+    "signupComplete": {
+      "POST": "api/v1/signup/complete"
+    },
+    "verification.resend": {
+      "POST": "api/v1/signup/verification/resend"
+    },
+    "verification.send.sms": {
+      "POST": "api/v1/signup/send/sms"
+    },
+    "verification.send.email": {
+      "POST": "api/v1/signup/send/email"
+    },
+    "verification.verify.code": {
+      "POST": "api/v1/signup/verify/code"
+    },
+    "verification.verify.email": {
+      "POST": "api/v1/signup/verify/email"
+    },
+    "verification.verify.username": {
+      "POST": "api/v1/signup/verify/username"
+    },
+    "verification.verify.phone": {
+      "POST": "api/v1/signup/verify/phone"
+    },
+    "verification.verify.login-code": {
+      "POST": "api/v1/signup/verify/login-code"
+    },
+    "kick.token.create": {
+      "GET": "kick-token-provider",
+      "HEAD": "kick-token-provider"
+    },
+    "channel.checkUsername": {
+      "GET": "channels/check-username/{username}",
+      "HEAD": "channels/check-username/{username}"
+    },
+    "api.search": {
+      "GET": "api/search",
+      "HEAD": "api/search"
+    },
+    "nova.terms": {
+      "GET": "nova/terms",
+      "HEAD": "nova/terms"
+    },
+    "channel.chat": {
+      "GET": "api/v1/channels/{channel}/chat",
+      "HEAD": "api/v1/channels/{channel}/chat"
+    },
+    "channels.followed": {
+      "GET": "api/v1/channels/followed",
+      "HEAD": "api/v1/channels/followed"
+    },
+    "channelLink.reorder": {
+      "POST": "api/v1/channel-links/reorder"
+    },
+    "channel.muteUser": {
+      "POST": "api/v1/channels/{channel}/mute-user"
+    },
+    "channel.followers": {
+      "GET": "api/v1/channels/{channel}/followers",
+      "HEAD": "api/v1/channels/{channel}/followers"
+    },
+    "channel.addBadge": {
+      "POST": "api/v1/channels/{channel}/add-badge"
+    },
+    "channel.removeBadge": {
+      "POST": "api/v1/channels/{channel}/remove-badge"
+    },
+    "channel.getFollowersForBadge": {
+      "GET": "api/v1/channels/{channel}/get-followers-for-badge/{badge}",
+      "HEAD": "api/v1/channels/{channel}/get-followers-for-badge/{badge}"
+    },
+    "channels.supportACreator": {
+      "POST": "api/v1/channels/{channel}/support-a-creator"
+    },
+    "liveChannels.search": {
+      "GET": "api/v1/live-channels/{channel}/search",
+      "HEAD": "api/v1/live-channels/{channel}/search"
+    },
+    "subscriptions.index": {
+      "GET": "api/v1/subscriptions",
+      "HEAD": "api/v1/subscriptions"
+    },
+    "subscriptions.subscribers": {
+      "GET": "api/v1/subscriptions/subscribers",
+      "HEAD": "api/v1/subscriptions/subscribers"
+    },
+    "subscriptions.history": {
+      "GET": "api/v1/subscriptions/history",
+      "HEAD": "api/v1/subscriptions/history"
+    },
+    "subscriptions.connect_account": {
+      "GET": "api/v1/subscriptions/connect-account",
+      "HEAD": "api/v1/subscriptions/connect-account"
+    },
+    "subscriptions.create_connect_account": {
+      "POST": "api/v1/subscriptions/connect-account"
+    },
+    "subscriptions.plan": {
+      "GET": "api/v1/subscriptions/plan",
+      "HEAD": "api/v1/subscriptions/plan"
+    },
+    "subscriptions.get_default_payment_method": {
+      "GET": "api/v1/subscriptions/default-payment-method",
+      "HEAD": "api/v1/subscriptions/default-payment-method"
+    },
+    "subscriptions.get_payment_methods": {
+      "GET": "api/v1/subscriptions/payment-methods",
+      "HEAD": "api/v1/subscriptions/payment-methods"
+    },
+    "subscriptions.create_payment_method": {
+      "POST": "api/v1/subscriptions/payment-methods"
+    },
+    "subscriptions.remove_payment_method": {
+      "DELETE": "api/v1/subscriptions/payment-methods/{id}"
+    },
+    "subscriptions.stripe_countries": {
+      "GET": "api/v1/subscriptions/stripe-countries",
+      "HEAD": "api/v1/subscriptions/stripe-countries"
+    },
+    "subscriptions.create_setup_intent": {
+      "GET": "api/v1/subscriptions/setup-intent",
+      "HEAD": "api/v1/subscriptions/setup-intent"
+    },
+    "subscriptions.resetable": {
+      "GET": "api/v1/subscriptions/reset",
+      "HEAD": "api/v1/subscriptions/reset"
+    },
+    "subscriptions.reset": {
+      "DELETE": "api/v1/subscriptions/reset"
+    },
+    "subscriptions.stripe_subscribe": {
+      "POST": "api/v1/subscriptions/channels/{channel}/subscribe"
+    },
+    "subscriptions.get_payments_history": {
+      "GET": "api/v1/subscriptions/payments-history",
+      "HEAD": "api/v1/subscriptions/payments-history"
+    },
+    "subscriptions.update_payment_method": {
+      "PUT": "api/v1/subscriptions/{subscription}/update-payment-method"
+    },
+    "subscriptions.cancel": {
+      "DELETE": "api/v1/subscriptions/{subscription}"
+    },
+    "subscriptions.gift-subscriptions": {
+      "POST": "api/v1/subscriptions/channels/{channel}/gift-subscriptions"
+    },
+    "subscriptions.confirm-payment-intent": {
+      "POST": "api/v1/subscriptions/channels/{channel}/confirm-payment-intent"
+    },
+    "channel.subscribe": {
+      "POST": "api/v1/channels/user/subscribe"
+    },
+    "channel.unsubscribe": {
+      "POST": "api/v1/channels/user/unsubscribe"
+    },
+    "channel.getLivestream": {
+      "GET": "api/v1/channels/{channel}/livestream",
+      "HEAD": "api/v1/channels/{channel}/livestream"
+    },
+    "liveStream.heartBeat": {
+      "GET": "api/v1/live-streams/{liveStream}/heart-beat",
+      "HEAD": "api/v1/live-streams/{liveStream}/heart-beat"
+    },
+    "channel.send": {
+      "POST": "api/v1/channels/{channel}/chat"
+    },
+    "contentmoderation.reportcontent": {
+      "POST": "api/v1/report-content"
+    },
+    "channel.followingSortBy": {
+      "GET": "api/v1/channels/following/{id}",
+      "HEAD": "api/v1/channels/following/{id}"
+    },
+    "chatroom.show": {
+      "GET": "api/v1/{channel}/chatroom",
+      "HEAD": "api/v1/{channel}/chatroom"
+    },
+    "chatroom.update": {
+      "PUT": "api/v1/chatrooms/{chatroom}"
+    },
+    "chatmessages.store": {
+      "POST": "api/v1/chat-messages"
+    },
+    "chatmessages.destroy": {
+      "POST": "api/v1/chat-messages/{id}"
+    },
+    "channel-links.store": {
+      "POST": "api/v1/channel-links"
+    },
+    "channel-links.update": {
+      "PUT": "api/v1/channel-links/{channel_link}",
+      "PATCH": "api/v1/channel-links/{channel_link}"
+    },
+    "channel-links.destroy": {
+      "DELETE": "api/v1/channel-links/{channel_link}"
+    },
+    "channels.show": {
+      "GET": "api/v1/channels/{channel}",
+      "HEAD": "api/v1/channels/{channel}"
+    },
+    "channels.links": {
+      "GET": "api/v1/channels/{channel}/links",
+      "HEAD": "api/v1/channels/{channel}/links"
+    },
+    "user.show": {
+      "GET": "api/v1/users/{username}",
+      "HEAD": "api/v1/users/{username}"
+    },
+    "categories.get": {
+      "GET": "api/v1/categories",
+      "HEAD": "api/v1/categories"
+    },
+    "categories.top": {
+      "GET": "api/v1/categories/top",
+      "HEAD": "api/v1/categories/top"
+    },
+    "user.categories.top": {
+      "GET": "api/v1/user/categories/top",
+      "HEAD": "api/v1/user/categories/top"
+    },
+    "categories.show": {
+      "GET": "api/v1/categories/{category}",
+      "HEAD": "api/v1/categories/{category}"
+    },
+    "user.livestreams": {
+      "GET": "api/v1/user/livestreams",
+      "HEAD": "api/v1/user/livestreams"
+    },
+    "subcategories.get": {
+      "GET": "api/v1/subcategories",
+      "HEAD": "api/v1/subcategories"
+    },
+    "subcategories.all": {
+      "GET": "api/v1/listsubcategories",
+      "HEAD": "api/v1/listsubcategories"
+    },
+    "subcategories.show": {
+      "GET": "api/v1/subcategories/{subcategory}",
+      "HEAD": "api/v1/subcategories/{subcategory}"
+    },
+    "video.show": {
+      "GET": "api/v1/video/{video}",
+      "HEAD": "api/v1/video/{video}"
+    },
+    "video.view": {
+      "POST": "api/v1/video/views/{video}"
+    },
+    "video.delete": {
+      "DELETE": "api/v1/video/{video}"
+    },
+    "subcategories.toggleFollow": {
+      "POST": "api/v1/subcategories/{subcategory}/toggle-follow"
+    },
+    "banned-users": {
+      "GET": "api/v1/channels/{channel}/banned-users",
+      "HEAD": "api/v1/channels/{channel}/banned-users"
+    },
+    "profile.v2.update_profile": {
+      "POST": "api/v2/update_profile"
+    },
+    "profile.update-username": {
+      "PATCH": "profile/update-username"
+    },
+    "v2.channels.followed": {
+      "GET": "api/v2/channels/followed",
+      "HEAD": "api/v2/channels/followed"
+    },
+    "payment.initiateSubscription": {
+      "POST": "api/v2/channels/{channel}/subscriptions"
+    },
+    "payment.cancelSubscription": {
+      "DELETE": "api/v2/channels/{channel}/subscriptions"
+    },
+    "channel.enableSubscription": {
+      "PUT": "api/v2/channels/{channel}/subscriptions/enable"
+    },
+    "user.updateFilteredCategories": {
+      "PUT": "api/v2/user/filtered-categories"
+    },
+    "user.getFilteredCategories": {
+      "GET": "api/v2/user/filtered-categories",
+      "HEAD": "api/v2/user/filtered-categories"
+    },
+    "payment.initiateGift": {
+      "POST": "api/v2/channels/{channel}/gift"
+    },
+    "channel.shouldMigrate": {
+      "GET": "api/v2/channels/{channel}/should-migrate",
+      "HEAD": "api/v2/channels/{channel}/should-migrate"
+    },
+    "channel.migrate": {
+      "GET": "api/v2/channels/{channel}/migrate",
+      "HEAD": "api/v2/channels/{channel}/migrate"
+    },
+    "channel.report": {
+      "POST": "api/v2/channels/{channel}/report"
+    },
+    "poll.create": {
+      "POST": "api/v2/channels/{channel}/polls"
+    },
+    "poll.delete": {
+      "DELETE": "api/v2/channels/{channel}/polls"
+    },
+    "poll.vote": {
+      "POST": "api/v2/channels/{channel}/polls/vote"
+    },
+    "pinnedMessage.create": {
+      "POST": "api/v2/channels/{channel}/pinned-message"
+    },
+    "pinnedMessage.delete": {
+      "DELETE": "api/v2/channels/{channel}/pinned-message"
+    },
+    "payment.listPlans": {
+      "GET": "api/v2/channels/{channel}/plans",
+      "HEAD": "api/v2/channels/{channel}/plans"
+    },
+    "channel.me": {
+      "GET": "api/v2/channels/{channel}/me",
+      "HEAD": "api/v2/channels/{channel}/me"
+    },
+    "channel.follow": {
+      "POST": "api/v2/channels/{channel}/follow"
+    },
+    "channel.unfollow": {
+      "DELETE": "api/v2/channels/{channel}/follow"
+    },
+    "user.getPaymentProfile": {
+      "GET": "api/v2/user/payment-profile",
+      "HEAD": "api/v2/user/payment-profile"
+    },
+    "user.addPaymentMethod": {
+      "POST": "api/v2/user/payment-methods"
+    },
+    "user.deletePaymentMethod": {
+      "POST": "api/v2/user/payment-methods/delete"
+    },
+    "user.changeDefaultPaymentMethod": {
+      "POST": "api/v2/user/payment-methods/default"
+    },
+    "user.getSubscriptions": {
+      "GET": "api/v2/user/subscriptions",
+      "HEAD": "api/v2/user/subscriptions"
+    },
+    "chatcommands.send": {
+      "POST": "api/v2/channels/{channel}/chat-commands"
+    },
+    "clip.init": {
+      "GET": "api/v2/channels/{channel}/clips/init",
+      "HEAD": "api/v2/channels/{channel}/clips/init"
+    },
+    "clip.finalize": {
+      "POST": "api/v2/channels/{channel}/clips/finalize"
+    },
+    "clip.delete": {
+      "DELETE": "api/v2/clips/{clip}"
+    },
+    "clip.like": {
+      "PUT": "api/v2/clips/{clip}/like"
+    },
+    "clip.unlike": {
+      "DELETE": "api/v2/clips/{clip}/like"
+    },
+    "clip.download": {
+      "GET": "api/v2/clips/{clip}/download",
+      "HEAD": "api/v2/clips/{clip}/download"
+    },
+    "ban.list": {
+      "GET": "api/v2/channels/{channel}/bans",
+      "HEAD": "api/v2/channels/{channel}/bans"
+    },
+    "ban.create": {
+      "POST": "api/v2/channels/{channel}/bans"
+    },
+    "ban.delete": {
+      "DELETE": "api/v2/channels/{channel}/bans/{username}"
+    },
+    "subscriber.last": {
+      "GET": "api/v2/channels/{channel}/subscribers/last",
+      "HEAD": "api/v2/channels/{channel}/subscribers/last"
+    },
+    "user.updateChannelNotifications": {
+      "PUT": "api/v2/user/channels/{channel}/notifications"
+    },
+    "mobile-tokens.store": {
+      "POST": "api/v2/mobile-tokens"
+    },
+    "mobile-tokens.destroy": {
+      "DELETE": "api/v2/mobile-tokens/{token}"
+    },
+    "chat-identity.update": {
+      "PUT": "api/v2/channels/{channelId}/users/{userId}/identity"
+    },
+    "v2.channels.feed-activities": {
+      "GET": "api/v2/channels/feed-activities",
+      "HEAD": "api/v2/channels/feed-activities"
+    },
+    "chat-history.channeluser-messages": {
+      "GET": "api/v2/channels/{channelId}/users/{userId}/messages",
+      "HEAD": "api/v2/channels/{channelId}/users/{userId}/messages"
+    },
+    "security.user.updatePhone": {
+      "POST": "api/v2/security/user/update-phone"
+    },
+    "livestream.update": {
+      "POST": "api/v2/stream/update"
+    },
+    "user.getVerifiedStatus": {
+      "GET": "api/v2/user/verified-status",
+      "HEAD": "api/v2/user/verified-status"
+    },
+    "channel.chatroomModify": {
+      "PUT": "api/v2/channels/{channel}/chatroom"
+    },
+    "channel.videos": {
+      "GET": "api/v2/channels/{channel}/videos",
+      "HEAD": "api/v2/channels/{channel}/videos"
+    },
+    "poll.get": {
+      "GET": "api/v2/channels/{channel}/polls",
+      "HEAD": "api/v2/channels/{channel}/polls"
+    },
+    "chat-identity.get": {
+      "GET": "api/v2/channels/{channelId}/users/{userId}/identity",
+      "HEAD": "api/v2/channels/{channelId}/users/{userId}/identity"
+    },
+    "chat-history.user-messages": {
+      "GET": "api/v2/users/{userId}/messages",
+      "HEAD": "api/v2/users/{userId}/messages"
+    },
+    "chat-history.channel-messages": {
+      "GET": "api/v2/channels/{channelId}/messages",
+      "HEAD": "api/v2/channels/{channelId}/messages"
+    },
+    "channels.showclean": {
+      "GET": "api/v2/channels/{channel}",
+      "HEAD": "api/v2/channels/{channel}"
+    },
+    "chat.getUserDetails": {
+      "GET": "api/v2/channels/{channel}/users/{username}",
+      "HEAD": "api/v2/channels/{channel}/users/{username}"
+    },
+    "channel.chatroom": {
+      "GET": "api/v2/channels/{channel}/chatroom",
+      "HEAD": "api/v2/channels/{channel}/chatroom"
+    },
+    "channel.livestream": {
+      "GET": "api/v2/channels/{channel}/livestream",
+      "HEAD": "api/v2/channels/{channel}/livestream"
+    },
+    "vod.latest": {
+      "GET": "api/v2/channels/{channel}/videos/latest",
+      "HEAD": "api/v2/channels/{channel}/videos/latest"
+    },
+    "chatroom.getRules": {
+      "GET": "api/v2/channels/{channel}/chatroom/rules",
+      "HEAD": "api/v2/channels/{channel}/chatroom/rules"
+    },
+    "chatroom.modifyRules": {
+      "PUT": "api/v2/channels/{channel}/chatroom/rules"
+    },
+    "chatroom.getBannedwords": {
+      "GET": "api/v2/channels/{channel}/chatroom/banned-words",
+      "HEAD": "api/v2/channels/{channel}/chatroom/banned-words"
+    },
+    "chatroom.modifyBannedwords": {
+      "PUT": "api/v2/channels/{channel}/chatroom/banned-words"
+    },
+    "clip.setPrivateStatus": {
+      "PUT": "api/v2/clips/{clip}/private"
+    },
+    "clip.getInfo": {
+      "GET": "api/v2/clips/{clip}/info",
+      "HEAD": "api/v2/clips/{clip}/info"
+    },
+    "clip.get": {
+      "GET": "api/v2/clips/{clip}",
+      "HEAD": "api/v2/clips/{clip}"
+    },
+    "clip.play": {
+      "GET": "api/v2/clips/{clip}/play",
+      "HEAD": "api/v2/clips/{clip}/play"
+    },
+    "clip.list": {
+      "GET": "api/v2/clips",
+      "HEAD": "api/v2/clips"
+    },
+    "clip.listForChannel": {
+      "GET": "api/v2/channels/{channel}/clips",
+      "HEAD": "api/v2/channels/{channel}/clips"
+    },
+    "clip.listForCategory": {
+      "GET": "api/v2/categories/{subcategory}/clips",
+      "HEAD": "api/v2/categories/{subcategory}/clips"
+    },
+    "channel.leaderboards": {
+      "GET": "api/v2/channels/{channel}/leaderboards",
+      "HEAD": "api/v2/channels/{channel}/leaderboards"
+    },
+    "liveStream.setMature": {
+      "PUT": "api/v2/livestreams/{liveStream}/mature"
+    },
+    "send.chatmessage": {
+      "POST": "api/v2/messages/send/{chatroomId}"
+    },
+    "delete.chatmessage": {
+      "DELETE": "api/v2/chatrooms/{chatroomId}/messages/{messageId}"
+    },
+    "stream.update": {
+      "POST": "stream/update"
+    },
+    "stream.updateStream": {
+      "POST": "stream/{liveStream}/update"
+    },
+    "stream.getInfo": {
+      "GET": "stream/info",
+      "HEAD": "stream/info"
+    },
+    "stream.setInfo": {
+      "PUT": "stream/info"
+    },
+    "stream.get_publish_token": {
+      "GET": "stream/publish_token",
+      "HEAD": "stream/publish_token"
+    },
+    "channel.update": {
+      "PUT": "channels"
+    },
+    "channel.addUser": {
+      "POST": "channels/add-user"
+    },
+    "channel.removeUser": {
+      "POST": "channels/remove-user"
+    },
+    "emotes.updatePrefix": {
+      "PUT": "emotes/prefix"
+    },
+    "emotes.index": {
+      "GET": "emotes",
+      "HEAD": "emotes"
+    },
+    "emotes.store": {
+      "POST": "emotes"
+    },
+    "emotes.destroy": {
+      "DELETE": "emotes/{emote}"
+    },
+    "channel-subscriber-badges.index": {
+      "GET": "channel-subscriber-badges",
+      "HEAD": "channel-subscriber-badges"
+    },
+    "channel-subscriber-badges.store": {
+      "POST": "channel-subscriber-badges"
+    },
+    "channel-subscriber-badges.update": {
+      "PUT": "channel-subscriber-badges/{channel_subscriber_badge}",
+      "PATCH": "channel-subscriber-badges/{channel_subscriber_badge}"
+    },
+    "channel-subscriber-badges.destroy": {
+      "DELETE": "channel-subscriber-badges/{channel_subscriber_badge}"
+    },
+    "user.setup2fa": {
+      "GET": "setup-2fa",
+      "HEAD": "setup-2fa"
+    },
+    "user.verify2Fa": {
+      "POST": "verify-2fa"
+    },
+    "user.remove2Fa": {
+      "PUT": "remove-2fa"
+    },
+    "stream.languages": {
+      "GET": "stream/languages",
+      "HEAD": "stream/languages"
+    },
+    "profile.default-pictures": {
+      "GET": "profile/default-pictures",
+      "HEAD": "profile/default-pictures"
+    },
+    "profile.update-default-picture": {
+      "PATCH": "profile/update-default-profile-picture"
+    },
+    "profile.update-default-banner": {
+      "PATCH": "profile/update-default-banner-picture"
+    },
+    "emotes.channelEmotes": {
+      "GET": "emotes/{channel}",
+      "HEAD": "emotes/{channel}"
+    },
+    "stream.livestreams": {
+      "GET": "stream/livestreams/{lang}",
+      "HEAD": "stream/livestreams/{lang}"
+    },
+    "stream.featured.livestreams": {
+      "GET": "stream/featured-livestreams/{lang}",
+      "HEAD": "stream/featured-livestreams/{lang}"
+    },
+    "livestream.viewers": {
+      "GET": "current-viewers",
+      "HEAD": "current-viewers"
+    },
+    "featured.livestreams.sidebar": {
+      "GET": "featured-livestreams/non-following",
+      "HEAD": "featured-livestreams/non-following"
+    },
+    "featured.livestreams.sidebar.v2": {
+      "GET": "featured-livestreams/non-following/{lang}",
+      "HEAD": "featured-livestreams/non-following/{lang}"
+    },
+    "profile.update_profile": {
+      "POST": "update_profile"
+    },
+    "profile.update_password": {
+      "POST": "update_password"
+    },
+    "profile.update-profile-picture": {
+      "POST": "profile/update-profile-picture"
+    },
+    "profile.update-profile-banner": {
+      "POST": "profile/update-profile-banner"
+    },
+    "profile.update-notification": {
+      "PATCH": "profile/update-notifications"
+    },
+    "profile.update-offline-banner": {
+      "PATCH": "profile/update-offline-banner-picture"
+    },
+    "chat.username": {
+      "GET": "channels/{channel}/{username}",
+      "HEAD": "channels/{channel}/{username}"
+    },
+    "channel.chatroom.settings.update": {
+      "PUT": "api/internal/v1/channels/{channel}/chatroom/settings"
+    },
+    "channel.chatroom.bannedwords.get": {
+      "GET": "api/internal/v1/channels/{channel}/chatroom/banned-words",
+      "HEAD": "api/internal/v1/channels/{channel}/chatroom/banned-words"
+    },
+    "channel.chatroom.bannedwords.add": {
+      "POST": "api/internal/v1/channels/{channel}/chatroom/banned-words"
+    },
+    "channel.chatroom.bannedwords.update": {
+      "PUT": "api/internal/v1/channels/{channel}/chatroom/banned-words/{bannedword}"
+    },
+    "channel.chatroom.bannedwords.delete": {
+      "DELETE": "api/internal/v1/channels/{channel}/chatroom/banned-words/{bannedword}"
+    },
+    "channel.chatroom.bannedwords.del": {
+      "POST": "api/internal/v1/channels/{channel}/chatroom/banned-words/delete"
+    },
+    "channel.chatroom.rules.update": {
+      "PUT": "api/internal/v1/channels/{channel}/chatroom/rules"
+    },
+    "channels.live.search": {
+      "GET": "api/internal/v1/live/search",
+      "HEAD": "api/internal/v1/live/search"
+    },
+    "channel.chatroom.identity.update": {
+      "PUT": "api/internal/v1/channels/{channel}/chatroom/identity"
+    },
+    "global.chatroom.identity.update": {
+      "PUT": "api/internal/v1/chatroom/identity"
+    },
+    "channel.chatroom.pinnedmessage.add": {
+      "POST": "api/internal/v1/channels/{channel}/chatroom/pinned-message"
+    },
+    "channel.chatroom.pinnedmessage.remove": {
+      "DELETE": "api/internal/v1/channels/{channel}/chatroom/pinned-message"
+    },
+    "channel.chatroom.poll.add": {
+      "POST": "api/internal/v1/channels/{channel}/chatroom/poll"
+    },
+    "channel.chatroom.poll.remove": {
+      "DELETE": "api/internal/v1/channels/{channel}/chatroom/poll"
+    },
+    "channel.chatroom.poll.vote": {
+      "POST": "api/internal/v1/channels/{channel}/chatroom/poll/vote"
+    },
+    "channel.community.moderators.get": {
+      "GET": "api/internal/v1/channels/{channel}/community/moderators",
+      "HEAD": "api/internal/v1/channels/{channel}/community/moderators"
+    },
+    "channel.community.moderators.add": {
+      "POST": "api/internal/v1/channels/{channel}/community/moderators"
+    },
+    "channel.community.moderators.remove": {
+      "DELETE": "api/internal/v1/channels/{channel}/community/moderators/{moderator}"
+    },
+    "user.moderators.get": {
+      "GET": "api/internal/v1/user/moderators",
+      "HEAD": "api/internal/v1/user/moderators"
+    },
+    "channel.community.ogs.get": {
+      "GET": "api/internal/v1/channels/{channel}/community/ogs",
+      "HEAD": "api/internal/v1/channels/{channel}/community/ogs"
+    },
+    "channel.community.ogs.add": {
+      "POST": "api/internal/v1/channels/{channel}/community/ogs"
+    },
+    "channel.community.ogs.remove": {
+      "DELETE": "api/internal/v1/channels/{channel}/community/ogs/{og}"
+    },
+    "channel.community.vips.get": {
+      "GET": "api/internal/v1/channels/{channel}/community/vips",
+      "HEAD": "api/internal/v1/channels/{channel}/community/vips"
+    },
+    "channel.community.vips.add": {
+      "POST": "api/internal/v1/channels/{channel}/community/vips"
+    },
+    "channel.community.vips.remove": {
+      "DELETE": "api/internal/v1/channels/{channel}/community/vips/{vip}"
+    },
+    "channel.events.get": {
+      "GET": "api/internal/v1/channels/{channel}/events",
+      "HEAD": "api/internal/v1/channels/{channel}/events"
+    },
+    "channel.livestreams.events.get": {
+      "GET": "api/internal/v1/channels/{channel}/events/livestreams",
+      "HEAD": "api/internal/v1/channels/{channel}/events/livestreams"
+    },
+    "chatroom.events.get": {
+      "GET": "api/internal/v1/chatrooms/{chatroom}/events",
+      "HEAD": "api/internal/v1/chatrooms/{chatroom}/events"
+    },
+    "livestream.events.get": {
+      "GET": "api/internal/v1/livestreams/{livestream}/events",
+      "HEAD": "api/internal/v1/livestreams/{livestream}/events"
+    },
+    "paypal.subscription.init": {
+      "POST": "api/internal/v1/channels/{channel}/paypal/subscriptions/init"
+    },
+    "paypal.gift.init": {
+      "POST": "api/internal/v1/channels/{channel}/paypal/gifts/init"
+    },
+    "paypal.subscription.finalize": {
+      "POST": "api/internal/v1/channels/{channel}/paypal/subscriptions/finalize"
+    },
+    "paypal.gift.finalize": {
+      "POST": "api/internal/v1/channels/{channel}/paypal/gifts/finalize"
+    },
+    "channel.payment.stats": {
+      "GET": "api/internal/v1/channels/{channel}/stats",
+      "HEAD": "api/internal/v1/channels/{channel}/stats"
+    },
+    "channel.payment.history.subscriptions": {
+      "GET": "api/internal/v1/channels/{channel}/history/subscriptions",
+      "HEAD": "api/internal/v1/channels/{channel}/history/subscriptions"
+    },
+    "channel.payment.history": {
+      "GET": "api/internal/v1/channels/{channel}/payment/history",
+      "HEAD": "api/internal/v1/channels/{channel}/payment/history"
+    },
+    "livestream.history": {
+      "GET": "api/internal/v1/channels/{channel}/livestream-history",
+      "HEAD": "api/internal/v1/channels/{channel}/livestream-history"
+    },
+    "vod.clip.create": {
+      "POST": "api/internal/v1/videos/{video}/clips"
+    },
+    "vod.clip.finalize": {
+      "POST": "api/internal/v1/videos/{video}/clips/{clip}/finalize"
+    },
+    "livestream.clip.create": {
+      "POST": "api/internal/v1/livestreams/{livestream}/clips"
+    },
+    "livestream.clip.finalize": {
+      "POST": "api/internal/v1/livestreams/{livestream}/clips/{clip}/finalize"
+    },
+    "livestream.clip.get": {
+      "GET": "api/internal/v1/clips/{clip}",
+      "HEAD": "api/internal/v1/clips/{clip}"
+    },
+    "livestream.clip.list": {
+      "GET": "api/internal/v1/clips",
+      "HEAD": "api/internal/v1/clips"
+    },
+    "livestream.clip.listForChannel": {
+      "GET": "api/internal/v1/channels/{channel}/clips",
+      "HEAD": "api/internal/v1/channels/{channel}/clips"
+    },
+    "livestream.clip.listForCategory": {
+      "GET": "api/internal/v1/categories/{subcategory}/clips",
+      "HEAD": "api/internal/v1/categories/{subcategory}/clips"
+    },
+    "livestream.clip.like": {
+      "POST": "api/internal/v1/clips/{clip}/like"
+    },
+    "livestream.clip.unlike": {
+      "POST": "api/internal/v1/clips/{clip}/unlike"
+    },
+    "channel.chatroom.get": {
+      "GET": "api/internal/v1/channels/{channel}/chatroom",
+      "HEAD": "api/internal/v1/channels/{channel}/chatroom"
+    },
+    "channel.followers.count.get": {
+      "GET": "api/internal/v1/channels/{channel}/followers-count",
+      "HEAD": "api/internal/v1/channels/{channel}/followers-count"
+    },
+    "channel.chatroom.settings.get": {
+      "GET": "api/internal/v1/channels/{channel}/chatroom/settings",
+      "HEAD": "api/internal/v1/channels/{channel}/chatroom/settings"
+    },
+    "channel.chatroom.identity.get": {
+      "GET": "api/internal/v1/channels/{channel}/chatroom/users/{userId}/identity",
+      "HEAD": "api/internal/v1/channels/{channel}/chatroom/users/{userId}/identity"
+    },
+    "global.chatroom.identity.get": {
+      "GET": "api/internal/v1/chatroom/users/{userId}/identity",
+      "HEAD": "api/internal/v1/chatroom/users/{userId}/identity"
+    },
+    "channel.chatroom.rules.get": {
+      "GET": "api/internal/v1/channels/{channel}/chatroom/rules",
+      "HEAD": "api/internal/v1/channels/{channel}/chatroom/rules"
+    },
+    "channel.chatroom.pinnedmessage.get": {
+      "GET": "api/internal/v1/channels/{channel}/chatroom/pinned-message",
+      "HEAD": "api/internal/v1/channels/{channel}/chatroom/pinned-message"
+    },
+    "channel.chatroom.poll.get": {
+      "GET": "api/internal/v1/channels/{channel}/chatroom/poll",
+      "HEAD": "api/internal/v1/channels/{channel}/chatroom/poll"
+    },
+    "channel.payment.profile.get": {
+      "GET": "api/internal/v1/channels/{channel}/payment/profile",
+      "HEAD": "api/internal/v1/channels/{channel}/payment/profile"
+    },
+    "apple.subscription.create": {
+      "POST": "api/internal/v1/payments/apple/subscriptions"
+    },
+    "apple.gift.create": {
+      "POST": "api/internal/v1/payments/apple/gifts"
+    },
+    "google.subscription.create": {
+      "POST": "api/internal/v1/payments/google/subscriptions"
+    },
+    "google.gift.create": {
+      "POST": "api/internal/v1/payments/google/gifts"
+    },
+    "livestream.updateMetadata": {
+      "PUT": "api/internal/v1/channels/{channel}/livestream/metadata"
+    },
+    "notification.get": {
+      "GET": "api/internal/v1/notifications",
+      "HEAD": "api/internal/v1/notifications"
+    },
+    "notification.livestreamstarted.email.update": {
+      "PUT": "api/internal/v1/notifications/livestream-started/email"
+    },
+    "notification.livestreamstarted.push.update": {
+      "PUT": "api/internal/v1/notifications/livestream-started/push"
+    },
+    "notification.mobile.add": {
+      "POST": "api/internal/v1/notifications/mobile"
+    },
+    "notification.mobile.delete": {
+      "DELETE": "api/internal/v1/notifications/mobile/{token}"
+    },
+    "webhooks.sns": {
+      "POST": "webhooks/sns"
+    },
+    "socialite.appleCallback": {
+      "POST": "redirect/{provider}"
+    },
+    "home.sitemap": {
+      "GET": "sitemap",
+      "HEAD": "sitemap"
+    },
+    "home.page.legal": {
+      "GET": "legal/{page}",
+      "HEAD": "legal/{page}"
+    },
+    "verification.verify": {
+      "GET": "email/verify/{id}/{hash}",
+      "HEAD": "email/verify/{id}/{hash}"
+    },
+    "stripe.payment-intent-redirect": {
+      "GET": "payment-intent-redirect",
+      "HEAD": "payment-intent-redirect"
+    },
+    "verification.verify-new": {
+      "GET": "verify-new-email/{token}",
+      "HEAD": "verify-new-email/{token}"
+    },
+    "swagger.getDocs": {
+      "GET": "documentation/api-docs.json",
+      "HEAD": "documentation/api-docs.json"
+    },
+    "nova.impersonate.take": {
+      "GET": "nova-impersonate/users/{id}/{guardName?}",
+      "HEAD": "nova-impersonate/users/{id}/{guardName?}"
+    },
+    "nova.impersonate.leave": {
+      "GET": "nova-impersonate/leave",
+      "HEAD": "nova-impersonate/leave"
+    },
+    "laravel-nova-excel.download": {
+      "GET": "nova-vendor/maatwebsite/laravel-nova-excel/download",
+      "HEAD": "nova-vendor/maatwebsite/laravel-nova-excel/download"
+    },
+    "app": {
+      "GET": "{fallbackPlaceholder}",
+      "HEAD": "{fallbackPlaceholder}"
+    }
+  }
+}
