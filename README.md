@@ -48,10 +48,10 @@ print(kick_com_data)
 ```javascript
 const fs = require('fs');
 
-# Read the JSON file
+// Read the JSON file
 const kickComData = JSON.parse(fs.readFileSync('kick_com_routes.json', 'utf-8'));
 
-# Example: Print out the loaded data
+// Example: Print out the loaded data
 console.log(kickComData);
 ```
 
@@ -86,16 +86,16 @@ Here's a full example in JavaScript that includes reading the JSON file:
 ```javascript
 const fs = require('fs');
 
-# Read the JSON file
+// Read the JSON file
 const kickComData = JSON.parse(fs.readFileSync('kick_com_routes.json', 'utf-8'));
 
-# Get the base URL and route URI
+// Get the base URL and route URI
 const baseUrl = kickComData.url;
 const routeUri = kickComData.routes['l5-swagger.default.api'].GET;
 
-# Construct the full URL
+// Construct the full URL
 const fullUrl = `${baseUrl}${routeUri}`;
 
-# Output: "https://kick.com/documentation"
+// Output: "https://kick.com/documentation"
 console.log(fullUrl);
 ```
